@@ -29,5 +29,5 @@ class CaptchaManager(object):
         while not captcha_token:
             token = self.captcha_queue.get()
             if token.is_valid():
-                captcha_token = token.token
+                captcha_token = token.value
         return captcha_token
